@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Digital - Kopi & Kuliner Sehari-hari</title>
+    <title>Menu Digital - Omada Coffe</title>
     <!-- CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -27,16 +27,16 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans pb-28 min-h-screen">
 
-    <!-- Hero Header -->
-    <header class="bg-gradient-to-r from-amber-600 to-amber-700 text-white py-10 px-4 text-center shadow-md relative overflow-hidden">
-        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Kopi & Kuliner Sehari-hari</h1>
-        <p class="mt-2 text-amber-100 text-xs md:text-sm max-w-md mx-auto">Pilih menu favorit Anda dan pesan secara instan langsung dari meja!</p>
+    <!-- Hero Header dengan Warna Utama #8c0307 -->
+    <header class="bg-[#8c0307] text-white py-10 px-4 text-center shadow-md relative overflow-hidden">
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Omada Coffee</h1>
+        <p class="mt-2 text-red-100 text-xs md:text-sm max-w-md mx-auto">Pilih menu favorit Anda dan pesan secara instan langsung dari meja!</p>
     </header>
 
     <!-- Navigation Filter Kategori -->
     <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-10 py-3 px-4 mb-6">
         <div class="max-w-md mx-auto flex justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar text-sm">
-            <button onclick="filterMenu('semua')" class="btn-filter bg-amber-600 text-white px-4 py-2 rounded-full transition font-medium text-xs whitespace-nowrap shadow-sm">Semua</button>
+            <button onclick="filterMenu('semua')" class="btn-filter bg-[#8c0307] text-white px-4 py-2 rounded-full transition font-medium text-xs whitespace-nowrap shadow-sm">Semua</button>
             <button onclick="filterMenu('makanan')" class="btn-filter bg-slate-100 text-slate-700 px-4 py-2 rounded-full transition hover:bg-slate-200 font-medium text-xs whitespace-nowrap">Makanan</button>
             <button onclick="filterMenu('minuman')" class="btn-filter bg-slate-100 text-slate-700 px-4 py-2 rounded-full transition hover:bg-slate-200 font-medium text-xs whitespace-nowrap">Minuman</button>
             <button onclick="filterMenu('camilan')" class="btn-filter bg-slate-100 text-slate-700 px-4 py-2 rounded-full transition hover:bg-slate-200 font-medium text-xs whitespace-nowrap">Camilan</button>
@@ -54,9 +54,9 @@
     <div id="cart-bar" class="fixed bottom-4 left-4 right-4 max-w-md mx-auto bg-slate-900/95 backdrop-blur-md text-white rounded-2xl p-4 shadow-2xl flex items-center justify-between hidden z-20 transition-all border border-slate-800">
         <div>
             <p class="text-xs text-slate-400"><span id="cart-count" class="font-bold text-white">0</span> Item Dipilih</p>
-            <p class="text-lg font-bold text-amber-400" id="cart-total">Rp 0</p>
+            <p class="text-lg font-bold text-red-400" id="cart-total">Rp 0</p>
         </div>
-        <button onclick="bukaModalKeranjang()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-2 shadow-lg">
+        <button onclick="bukaModalKeranjang()" class="bg-[#8c0307] hover:bg-[#6e0205] text-white font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition flex items-center gap-2 shadow-lg">
             🛒 Lihat Pesanan
         </button>
     </div>
@@ -81,11 +81,11 @@
             <div class="space-y-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-100">
                 <div>
                     <label class="block text-xs font-semibold text-slate-600 mb-1">Nomor Meja <span class="text-red-500">*</span></label>
-                    <input type="text" id="no-meja" placeholder="Contoh: Meja 05" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
+                    <input type="text" id="no-meja" placeholder="Contoh: Meja 05" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#8c0307] bg-white">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-600 mb-1">Nama Pemesan <span class="text-red-500">*</span></label>
-                    <input type="text" id="nama-pemesan" placeholder="Nama Anda" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
+                    <input type="text" id="nama-pemesan" placeholder="Nama Anda" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#8c0307] bg-white">
                 </div>
             </div>
 
@@ -100,7 +100,7 @@
             <!-- Pilih Metode Pembayaran -->
             <div>
                 <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Metode Pembayaran</h3>
-                <select id="metode-bayar" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <select id="metode-bayar" class="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-[#8c0307]">
                     <option value="QRIS / E-Wallet">QRIS / E-Wallet (Gopay/OVO/Dana)</option>
                     <option value="Tunai di Kasir">Bayar Tunai di Kasir</option>
                     <option value="Debit / Kartu Kredit">Kartu Debit / Kredit</option>
@@ -112,7 +112,7 @@
         <div class="p-4 border-t border-slate-100 bg-slate-50 rounded-b-3xl">
             <div class="flex justify-between items-center mb-3">
                 <span class="text-xs font-semibold text-slate-600">Total Pembayaran:</span>
-                <span class="text-lg font-extrabold text-amber-600" id="modal-total-price">Rp 0</span>
+                <span class="text-lg font-extrabold text-[#8c0307]" id="modal-total-price">Rp 0</span>
             </div>
             <button onclick="kirimPesananWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-xs sm:text-sm shadow-md">
                 📱 Kirim Pesanan via WhatsApp
@@ -127,11 +127,41 @@
 
         // Data Menu Produk
         const dataMenu = [
-            { id: 1, nama: "Kopi Susu Gula Aren", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
-            { id: 2, nama: "Nasi Goreng Spesial", kategori: "makanan", harga: 28000, deskripsi: "Nasi goreng dengan bumbu rempah pilihan, telur, dan potongan ayam.", gambar: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=400&q=80" },
-            { id: 3, nama: "Croissant Cokelat", kategori: "camilan", harga: 22000, deskripsi: "Pastry renyah bergaya Prancis dengan isian cokelat leleh.", gambar: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80" },
-            { id: 4, nama: "Matcha Latte", kategori: "minuman", harga: 24000, deskripsi: "Teh hijau khas Jepang berkualitas premium yang creamy.", gambar: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=400&q=80" },
-            { id: 5, nama: "Roti Bakar Keju", kategori: "camilan", harga: 15000, deskripsi: "Roti tebal dipanggang dengan mentega dan taburan keju melimpah.", gambar: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80" }
+            { id: 1, nama: "Sego Ndog", kategori: "makanan", harga: 13000, deskripsi: "Sambal Matah Dengan Telur Krispy.", gambar: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=400&q=80" },
+            { id: 2, nama: "Mie Nyemek", kategori: "makanan", harga: 15000, deskripsi: ".", gambar: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=400&q=80" },
+            { id: 3, nama: "Onion Ring", kategori: "camilan", harga: 13000, deskripsi: "Pastry renyah bergaya Prancis dengan isian cokelat leleh.", gambar: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80" },
+            { id: 4, nama: "Cireng", kategori: "camilan", harga: 13000, deskripsi: "Teh hijau khas Jepang berkualitas premium yang creamy.", gambar: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=400&q=80" },
+            { id: 5, nama: "French Fried", kategori: "camilan", harga: 13000, deskripsi: "Roti tebal dipanggang dengan mentega dan taburan keju melimpah.", gambar: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=400&q=80" },
+			{ id: 6, nama: "Kopsu Pandan", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 7, nama: "Kopsu Aren", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 8, nama: "Butterscoth", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 9, nama: "Vanilla Latte", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 10, nama: "Caramel Latte", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 11, nama: "Cappucino", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 12, nama: "Matcha", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 13, nama: "Coklat", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 14, nama: "Red Velvet", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 15, nama: "Taro", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 16, nama: "Strauberry Milk", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 17, nama: "Lime Honey", kategori: "minuman", harga: 10000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 18, nama: "Lemon Tea", kategori: "minuman", harga: 10000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 19, nama: "Lycee Tea", kategori: "minuman", harga: 13000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 20, nama: "Tropical Bluberry", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 21, nama: "Tropical Strawberry", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 22, nama: "V60", kategori: "minuman", harga: 20000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 23, nama: "Japanese", kategori: "minuman", harga: 20000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 24, nama: "Vietnam Drip", kategori: "minuman", harga: 15000, deskripsi: "", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 25, nama: "Kopi Tubruk", kategori: "minuman", harga: 10000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 26, nama: "Kopsu Tubruk", kategori: "minuman", harga: 13000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 27, nama: "Tropical Lychee", kategori: "minuman", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 28, nama: "Summer Dream", kategori: "minuman", harga: 20000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 29, nama: "Berrry Cano", kategori: "minuman", harga: 20000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 30, nama: "Tahu Walik", kategori: "camilan", harga: 13000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 31, nama: "Pangsit", kategori: "camilan", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 32, nama: "Mix Platter", kategori: "camilan", harga: 15000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 33, nama: "Espresso", kategori: "minuman", harga: 12000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 34, nama: "Americano", kategori: "minuman", harga: 18000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
+			{ id: 35, nama: "Mendoan", kategori: "camilan", harga: 10000, deskripsi: "Espresso espresso pilihan dipadukan dengan susu segar dan gula aren asli.", gambar: "https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=400&q=80" },
         ];
 
         // State Penyimpanan Keranjang & Catatan
@@ -146,17 +176,17 @@
                     <div>
                         <img src="${item.gambar}" alt="${item.nama}" class="w-full h-40 object-cover" loading="lazy">
                         <div class="p-4">
-                            <span class="text-[10px] font-bold tracking-wider uppercase bg-amber-50 text-amber-700 px-2 py-0.5 rounded-md">${item.kategori}</span>
+                            <span class="text-[10px] font-bold tracking-wider uppercase bg-red-50 text-[#8c0307] px-2 py-0.5 rounded-md">${item.kategori}</span>
                             <h3 class="font-bold text-slate-800 text-sm md:text-base mt-2">${item.nama}</h3>
                             <p class="text-slate-500 text-xs mt-1 leading-relaxed">${item.deskripsi}</p>
                         </div>
                     </div>
                     <div class="p-4 pt-0 flex items-center justify-between mt-2">
-                        <span class="font-bold text-amber-600 text-sm">Rp ${item.harga.toLocaleString('id-ID')}</span>
+                        <span class="font-bold text-[#8c0307] text-sm">Rp ${item.harga.toLocaleString('id-ID')}</span>
                         <div class="flex items-center gap-2">
                             <button onclick="tambahItem(${item.id}, -1)" class="w-7 h-7 bg-slate-100 rounded-lg text-slate-600 font-bold hover:bg-slate-200 transition text-sm flex items-center justify-center">-</button>
                             <span id="qty-${item.id}" class="text-xs font-bold w-4 text-center">0</span>
-                            <button onclick="tambahItem(${item.id}, 1)" class="w-7 h-7 bg-amber-600 rounded-lg text-white font-bold hover:bg-amber-700 transition text-sm flex items-center justify-center">+</button>
+                            <button onclick="tambahItem(${item.id}, 1)" class="w-7 h-7 bg-[#8c0307] hover:bg-[#6e0205] rounded-lg text-white font-bold transition text-sm flex items-center justify-center">+</button>
                         </div>
                     </div>
                 </div>
@@ -173,11 +203,11 @@
         function filterMenu(kategori) {
             const buttons = document.querySelectorAll('.btn-filter');
             buttons.forEach(btn => {
-                btn.classList.remove('bg-amber-600', 'text-white', 'shadow-sm');
+                btn.classList.remove('bg-[#8c0307]', 'text-white', 'shadow-sm');
                 btn.classList.add('bg-slate-100', 'text-slate-700');
             });
             event.target.classList.remove('bg-slate-100', 'text-slate-700');
-            event.target.classList.add('bg-amber-600', 'text-white', 'shadow-sm');
+            event.target.classList.add('bg-[#8c0307]', 'text-white', 'shadow-sm');
 
             if (kategori === 'semua') {
                 renderMenu(dataMenu);
@@ -250,19 +280,19 @@
                             <div class="flex-1 pr-2">
                                 <h4 class="font-bold text-slate-800 text-xs">${item.nama}</h4>
                                 <p class="text-[11px] text-slate-400">Rp ${item.harga.toLocaleString('id-ID')} x ${qty}</p>
-                                <p class="text-xs font-bold text-amber-600 mt-0.5">Rp ${subtotal.toLocaleString('id-ID')}</p>
+                                <p class="text-xs font-bold text-[#8c0307] mt-0.5">Rp ${subtotal.toLocaleString('id-ID')}</p>
                             </div>
                             <div class="flex items-center gap-2">
                                 <button onclick="tambahItem(${item.id}, -1)" class="w-6 h-6 bg-slate-100 rounded text-slate-600 font-bold hover:bg-slate-200 text-xs flex items-center justify-center">-</button>
                                 <span class="text-xs font-bold w-4 text-center">${qty}</span>
-                                <button onclick="tambahItem(${item.id}, 1)" class="w-6 h-6 bg-amber-600 rounded text-white font-bold hover:bg-amber-700 text-xs flex items-center justify-center">+</button>
+                                <button onclick="tambahItem(${item.id}, 1)" class="w-6 h-6 bg-[#8c0307] rounded text-white font-bold hover:bg-[#6e0205] text-xs flex items-center justify-center">+</button>
                             </div>
                         </div>
                         <input type="text" 
                                value="${noteVal}" 
                                onchange="simpanCatatan(${item.id}, this.value)"
                                placeholder="Catatan (misal: Less sugar, pedas)" 
-                               class="w-full text-[11px] p-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-500">
+                               class="w-full text-[11px] p-2 rounded-lg bg-slate-50 border border-slate-200 focus:outline-none focus:ring-1 focus:ring-[#8c0307]">
                     </div>
                 `;
             }).join('');
